@@ -1,0 +1,38 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Jacquarda+Bastarda+9&family=Micro+5&family=Protest+Riot&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    padding: 20px;
+    background-color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+h1{
+    color: rgb(0, 0, 0);
+}
+h1#principal{
+    font-size: 50px;
+    text-align: center;
+    color: #BFF51B;
+}
+h2{
+    color: rgb(0, 0, 0);
+}
+p{
+    color: rgb(0, 0, 0);
+    font-family: "roboto", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+.basico{
+    color: green;
+    font-weight: bold;
+}
+.intermediario{
+    color: yellow;
+    font-weight: bold;
+}
+.avançado{
+    color: red;
+    font-weight: bold;
+}

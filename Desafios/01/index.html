@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .calculator {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .calculator input[type="text"] {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .calculator button {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            font-size: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .calculator button:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<div class="calculator">
+    <input type="text" id="result" disabled>
+    <button onclick="appendNumber('7')">7</button>
+    <button onclick="appendNumber('8')">8</button>
+    <button onclick="appendNumber('9')">9</button>
+    <button onclick="appendOperator('+')">+</button>
+    <br>
+    <button onclick="appendNumber('4')">4</button>
+    <button onclick="appendNumber('5')">5</button>
+    <button onclick="appendNumber('6')">6</button>
+    <button onclick="appendOperator('-')">-</button>
+    <br>
+    <button onclick="appendNumber('1')">1</button>
+    <button onclick="appendNumber('2')">2</button>
+    <button onclick="appendNumber('3')">3</button>
+    <button onclick="appendOperator('*')">*</button>
+    <br>
+    <button onclick="appendNumber('0')">0</button>
+    <button onclick="clearInput()">C</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="appendOperator('/')">/</button>
+</div>
+
+<script>
+    function appendNumber(number) {
+        document.getElementById('result').value += number;
+    }
+
+    function appendOperator(operator) {
+        document.getElementById('result').value += operator;
+    }
+
+    function calculate() {
+        let result = document.getElementById('result').value;
+        try {
+            document.getElementById('result').value = eval(result);
+        } catch (error) {
+            document.getElementById('result').value = 'Error';
+        }
+    }
+
+    function clearInput() {
+        document.getElementById('result').value = '';
+    }
+</script>
+
+</body>
+</html>
